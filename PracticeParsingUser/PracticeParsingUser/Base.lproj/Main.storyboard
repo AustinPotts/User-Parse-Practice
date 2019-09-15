@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oWN-R1-zOw">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -36,7 +36,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="pTT-aD-cnK" kind="show" id="cWS-wa-Cuh"/>
+                                    <segue destination="pTT-aD-cnK" kind="show" identifier="UserDetail" id="cWS-wa-Cuh"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -113,6 +113,11 @@
                         <viewLayoutGuide key="safeArea" id="DWw-iz-GhC"/>
                     </view>
                     <navigationItem key="navigationItem" title="User" id="FfL-1a-Xpg"/>
+                    <connections>
+                        <outlet property="emailLabel" destination="Up6-Gs-KLa" id="8ku-0a-HYP"/>
+                        <outlet property="imageView" destination="Ed9-VQ-nHn" id="Ep8-2V-ruz"/>
+                        <outlet property="phoneLabel" destination="0fb-m4-0dC" id="ulo-cG-VN1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hoB-ey-FB7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -39,7 +39,10 @@ class UsersTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "UserCell", for: indexPath)
 
-        // Configure the cell...
+        let user = apiController.user[indexPath.row]
+        cell.textLabel?.text = user.name.first.capitalized + " " + user.name.last.capitalized
+        guard let imageData = try? Data(contentsOf: user.picture.thumbnail) else {fatalError()}
+        cell.imageView?.image = UIImage(data: imageData)
 
         return cell
     }
@@ -80,14 +83,20 @@ class UsersTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+      
+        if segue.identifier == "UserDetail" {
+            guard let userDetailVC = segue.destination as? UserDetailViewController else {return}
+            guard let indexPath = tableView.indexPathForSelectedRow else {return}
+            let user = apiController.user[indexPath.row]
+            userDetailVC.user = user
+        }
+        
     }
-    */
+    
 
 }
