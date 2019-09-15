@@ -12,6 +12,7 @@ class APIController {
     
     //A Place for my Array of Users to live
     var user: [User] = []
+    var userTeam: [User] = []
     
     let baseURL = URL(string: "https://randomuser.me/api/?format=json&results=20")!
     
@@ -41,4 +42,14 @@ class APIController {
        }.resume()
     }
     
+    
+    func addUser(user: User){
+        
+        userTeam.append(user)
+        
+    }
+    
 }
+
+
+

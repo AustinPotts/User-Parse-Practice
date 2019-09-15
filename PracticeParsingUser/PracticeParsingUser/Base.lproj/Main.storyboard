@@ -112,7 +112,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="DWw-iz-GhC"/>
                     </view>
-                    <navigationItem key="navigationItem" title="User" id="FfL-1a-Xpg"/>
+                    <navigationItem key="navigationItem" title="User" id="FfL-1a-Xpg">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="RWu-vh-mBa">
+                            <connections>
+                                <action selector="addButtonPressed:" destination="pTT-aD-cnK" id="pk6-Mt-v89"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="emailLabel" destination="Up6-Gs-KLa" id="8ku-0a-HYP"/>
                         <outlet property="imageView" destination="Ed9-VQ-nHn" id="Ep8-2V-ruz"/>
@@ -127,7 +133,7 @@
         <scene sceneID="ePI-XV-DHm">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5L5-J1-FHo" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Users" id="7Ln-AF-h1q"/>
+                    <tabBarItem key="tabBarItem" title="Users" image="woman-man-7" id="7Ln-AF-h1q"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="BdD-83-KeJ">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -153,11 +159,72 @@
                     </tabBar>
                     <connections>
                         <segue destination="5L5-J1-FHo" kind="relationship" relationship="viewControllers" id="XU1-88-GPs"/>
+                        <segue destination="GIo-gp-5BT" kind="relationship" relationship="viewControllers" id="FGZ-6q-Po5"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="blK-xy-aHC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="812" y="-403"/>
         </scene>
+        <!--User Team Table View Controller-->
+        <scene sceneID="vTL-ep-TZU">
+            <objects>
+                <tableViewController id="Cub-em-IAo" customClass="UserTeamTableViewController" customModule="PracticeParsingUser" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Oa3-ku-LBG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AddedUserCell" textLabel="0Sw-BW-lte" style="IBUITableViewCellStyleDefault" id="uG7-dg-7H7">
+                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uG7-dg-7H7" id="rMp-ZT-Xbk">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0Sw-BW-lte">
+                                            <rect key="frame" x="20" y="0.0" width="374" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Cub-em-IAo" id="xpx-ue-swf"/>
+                            <outlet property="delegate" destination="Cub-em-IAo" id="ECr-5r-UZP"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="1jh-0f-Av5"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KjG-VJ-xoY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2715.9420289855075" y="-738.61607142857144"/>
+        </scene>
+        <!--Friends -->
+        <scene sceneID="FgV-we-veU">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GIo-gp-5BT" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Friends " id="I60-t2-vkr"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cLI-PE-zKR">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Cub-em-IAo" kind="relationship" relationship="rootViewController" id="lbs-UZ-5Xm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="awb-t6-BLE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1805.7971014492755" y="-738.61607142857144"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="woman-man-7" width="29" height="30"/>
+    </resources>
 </document>

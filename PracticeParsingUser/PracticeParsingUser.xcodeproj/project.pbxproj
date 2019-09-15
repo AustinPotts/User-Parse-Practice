@@ -16,6 +16,7 @@
 		4556A634232DE43400FD0CC5 /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4556A633232DE43400FD0CC5 /* UserDetailViewController.swift */; };
 		4556A637232DE47B00FD0CC5 /* ApiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4556A636232DE47B00FD0CC5 /* ApiController.swift */; };
 		4556A639232DE48A00FD0CC5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4556A638232DE48A00FD0CC5 /* User.swift */; };
+		4556A63D232DF28500FD0CC5 /* UserTeamTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4556A63C232DF28500FD0CC5 /* UserTeamTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		4556A633232DE43400FD0CC5 /* UserDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
 		4556A636232DE47B00FD0CC5 /* ApiController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiController.swift; sourceTree = "<group>"; };
 		4556A638232DE48A00FD0CC5 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		4556A63C232DF28500FD0CC5 /* UserTeamTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTeamTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +48,7 @@
 		4556A613232DDF4200FD0CC5 = {
 			isa = PBXGroup;
 			children = (
+				4556A63C232DF28500FD0CC5 /* UserTeamTableViewController.swift */,
 				4556A63B232DE4A800FD0CC5 /* Model Controller */,
 				4556A63A232DE49500FD0CC5 /* Model */,
 				4556A635232DE46000FD0CC5 /* View Controllers */,
@@ -171,6 +174,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4556A63D232DF28500FD0CC5 /* UserTeamTableViewController.swift in Sources */,
 				4556A622232DDF4200FD0CC5 /* ViewController.swift in Sources */,
 				4556A620232DDF4200FD0CC5 /* AppDelegate.swift in Sources */,
 				4556A639232DE48A00FD0CC5 /* User.swift in Sources */,

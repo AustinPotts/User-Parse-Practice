@@ -14,6 +14,7 @@ class UserDetailViewController: UIViewController {
     @IBOutlet weak var phoneLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     
+    var apiController: APIController?
     var user: User? {
         didSet{
             updateViews()
@@ -38,14 +39,12 @@ class UserDetailViewController: UIViewController {
         imageView.image = UIImage(data: imageData)
     }
     
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
+    
+    @IBAction func addButtonPressed(_ sender: Any) {
+        guard let personToBeSaved = user else{return}
+        apiController?.addUser(user: personToBeSaved)
+        navigationController?.popToRootViewController(animated: true)
+        
+    }
     
 }
