@@ -12,6 +12,10 @@
 		4556A625232DDF4200FD0CC5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4556A623232DDF4200FD0CC5 /* Main.storyboard */; };
 		4556A627232DDF4300FD0CC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4556A626232DDF4300FD0CC5 /* Assets.xcassets */; };
 		4556A62A232DDF4300FD0CC5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4556A628232DDF4300FD0CC5 /* LaunchScreen.storyboard */; };
+		4556A632232DE41600FD0CC5 /* UsersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4556A631232DE41600FD0CC5 /* UsersTableViewController.swift */; };
+		4556A634232DE43400FD0CC5 /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4556A633232DE43400FD0CC5 /* UserDetailViewController.swift */; };
+		4556A637232DE47B00FD0CC5 /* ApiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4556A636232DE47B00FD0CC5 /* ApiController.swift */; };
+		4556A639232DE48A00FD0CC5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4556A638232DE48A00FD0CC5 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		4556A626232DDF4300FD0CC5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4556A629232DDF4300FD0CC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4556A62B232DDF4300FD0CC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4556A631232DE41600FD0CC5 /* UsersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersTableViewController.swift; sourceTree = "<group>"; };
+		4556A633232DE43400FD0CC5 /* UserDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
+		4556A636232DE47B00FD0CC5 /* ApiController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiController.swift; sourceTree = "<group>"; };
+		4556A638232DE48A00FD0CC5 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +46,9 @@
 		4556A613232DDF4200FD0CC5 = {
 			isa = PBXGroup;
 			children = (
+				4556A63B232DE4A800FD0CC5 /* Model Controller */,
+				4556A63A232DE49500FD0CC5 /* Model */,
+				4556A635232DE46000FD0CC5 /* View Controllers */,
 				4556A61E232DDF4200FD0CC5 /* PracticeParsingUser */,
 				4556A61D232DDF4200FD0CC5 /* Products */,
 			);
@@ -62,6 +73,31 @@
 				4556A62B232DDF4300FD0CC5 /* Info.plist */,
 			);
 			path = PracticeParsingUser;
+			sourceTree = "<group>";
+		};
+		4556A635232DE46000FD0CC5 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4556A631232DE41600FD0CC5 /* UsersTableViewController.swift */,
+				4556A633232DE43400FD0CC5 /* UserDetailViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		4556A63A232DE49500FD0CC5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4556A638232DE48A00FD0CC5 /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4556A63B232DE4A800FD0CC5 /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4556A636232DE47B00FD0CC5 /* ApiController.swift */,
+			);
+			path = "Model Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +173,10 @@
 			files = (
 				4556A622232DDF4200FD0CC5 /* ViewController.swift in Sources */,
 				4556A620232DDF4200FD0CC5 /* AppDelegate.swift in Sources */,
+				4556A639232DE48A00FD0CC5 /* User.swift in Sources */,
+				4556A637232DE47B00FD0CC5 /* ApiController.swift in Sources */,
+				4556A634232DE43400FD0CC5 /* UserDetailViewController.swift in Sources */,
+				4556A632232DE41600FD0CC5 /* UsersTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
